@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/pc/IdeaProjects/WebAutomationProject">
+        <classes>
+            <class name="RegistrationTest.RegistrationTest">
+                <methods>
+                    <include name="RegisterWithValidData"/>
+                    <include name="RegisterWithBlankData"/>
+                    <include name="RegisterWithInvalidEmailFormat"/>
+                    <include name="RegisterWithPasswordLessThan3Chars"/>
+                    <include name="RegisterWithNotMatchingPasswords"/>
+                    <include name="RegisterWithAlreadyRegisteredEmail"/>
+                </methods>
+            </class>
+            <class name="searchingTest.SearchingTest">
+                <methods>
+                    <include name="searchResultsShouldBeRelevantToSearchQuery"/>
+                    <include name="searchResultsListShouldBeRelevantToSearchQuery"/>
+                    <include name="searchWithBlankFieldShouldDisplayError"/>
+                    <include name="sortSearchResultsByNameAscending"/>
+                    <include name="sortSearchResultsByNameDescending"/>
+                    <include name="sortSearchResultsByPriceAscending"/>
+                    <include name="sortSearchResultsByPriceDescending"/>
+                    <include name="changePricesCurrency"/>
+                </methods>
+            </class>
+            <class name="cartTest.CartTest">
+                <methods>
+                    <include name="productDetailsInCartShouldBeCorrect"/>
+                    <include name="addProductToCartWithNegativeQuantity"/>
+                    <include name="addProductToCartWithSpecialCharacterInQuantityField"/>
+                    <include name="changeQuantityInTheCartShouldChangeSubtotalPrice"/>
+                    <include name="DeleteProductFromCart"/>
+                    <include name="CorrectProductDataInCartAfterUpdatingTheData"/>
+                    <include name="AddingGiftWrappingWillAdd10$ToTotalPrice"/>
+                    <include name="RemovingGiftWrappingWillRemove10$FromTotalPrice"/>
+                    <include name="CheckoutButtonRedirectsToCheckoutPage"/>
+                </methods>
+            </class>
+            <class name="checkoutTest.CheckoutTest">
+                <methods>
+                    <include name="EnterValidDataInBillingAddress"/>
+                    <include name="LeaveBillingAddressFieldsWithBlankData"/>
+                    <include name="EnterInvalidEmailFormatInBillingAddressData"/>
+                    <include name="EnterValidDataInPaymentInfo"/>
+                    <include name="LeavePaymentInfoWithBlankFields"/>
+                    <include name="TypeCharactersInCardNumberField"/>
+                    <include name="TypeSpecialCharactersInCardNumberField"/>
+                    <include name="TypeCharactersInCardCodeField"/>
+                    <include name="TypeSpecialCharactersInCardCodeField"/>
+                    <include name="TypeExpiredDateInExpirationDateField"/>
+                    <include name="ConfirmOrderDataShouldBeCorrect"/>
+                </methods>
+            </class>
+            <class name="loginTest.LoginTest">
+                <methods>
+                    <include name="loginWithValidData"/>
+                    <include name="loginWithCheckingRememberMeChkBox"/>
+                    <include name="loginWithValidEmailAndInvalidPassword"/>
+                    <include name="loginWithInvalidEmailAndValidPassword"/>
+                    <include name="loginWithValidEmailAndEmptyPassword"/>
+                    <include name="loginWithInvalidEmailFormatAndValidPassword"/>
+                    <include name="loginWithEmptyEmailAndEmptyPassword"/>
+                    <include name="RegisterBtnShouldRedirectToRegistrationPage"/>
+                </methods>
+            </class>
+            <class name="myAccountTest.MyAccountTest">
+                <methods>
+                    <include name="UpdateAccountInfoWithValidData"/>
+                    <include name="UpdateAccountInfoWithBlankData"/>
+                    <include name="UpdateAccountInfoWithInvalidEmailFormat"/>
+                    <include name="UpdateAccountInfoWithAlreadyRegisteredEmail"/>
+                    <include name="CreateNewAddressWithValidData"/>
+                    <include name="CreateNewAddressWithBlankData"/>
+                    <include name="ChangePasswordToNewValidPassword"/>
+                    <include name="ChangePasswordToSamePassword"/>
+                    <include name="ChangePasswordToPasswordLessThan3Chars"/>
+                    <include name="ChangePasswordWithNotMatchingPasswords"/>
+                </methods>
+            </class>
+
+            <class name="wishlistTest.WishlistTest">
+                <methods>
+                    <include name="productDetailsInWishlistShouldBeCorrect"/>
+                    <include name="addProductToWishlistWithNegativeQuantity"/>
+                    <include name="addProductToWishlistWithSpecialCharacterInQuantityField"/>
+                    <include name="changeQuantityInTheWishlistShouldChangeSubtotalPrice"/>
+                    <include name="DeleteProductFromWishlist"/>
+                    <include name="CorrectProductDataInWishlistAfterUpdatingTheData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
