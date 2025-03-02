@@ -25,7 +25,7 @@ public class CartTest extends TestBase {
         Double productPriceSrch = searchResultPage.getFirstProductPrice();
         ProductPage productPage = searchResultPage.clickOnFirstProduct();
         Assert.assertEquals(productNameSrch,productPage.getProductName());
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         Assert.assertEquals(productPriceSrch,productPage.getProductPrice());
         productPage.enterTextInCustomTextField("Hossam");
         productPage.setQuantity("3");
